@@ -1,15 +1,13 @@
-.puma {
-    .header-space {
-        background-color: $fontColor-1;
-        li {
-            a {
-                color : $fontColor-a;
-            }
-            &:hover {
-                a {
-                    color: $fontColor-f;
-                }
-            }
+.header-space{
+    background-color:$fontColor-1;
+    li{
+        a{
+            color:$fontColor-a;
+        }
+        &:hover{
+            a{
+                color:$fontColor-f;
+            } 
         }
     }
 }

@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main/>}></Route>
-          <Route path="/category/:brand" element={<Category/>}></Route>
+          <Route path="/category/:index" element={<Category/>}></Route>
           {/* 추후에 useParams() 함수 메서드를 통해서 던질값에 대해서는 변수명을 일치시킬 것 */}
           <Route></Route>
         </Routes>
