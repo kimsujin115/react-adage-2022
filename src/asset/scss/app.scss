@@ -1,0 +1,11 @@
+//app.scss (스타일(scss)를 통합하는 곳)
+
+@import 'abstracts/variables';
+@import 'base/typograph';
+@import 'base/reset';
+@import 'simple';
+@import 'layout';
+@import 'layout/paragraph';
+@import 'components/header';
+@import 'components/slider';
+@import 'components/content';

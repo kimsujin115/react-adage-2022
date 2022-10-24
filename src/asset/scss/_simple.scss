@@ -1,0 +1,76 @@
+@for $i from 0 through 200 {
+    //변수파트 선언
+    $val : 1px * $i; //px 고정단위
+    $colunm : calc(100% / $i); //단의 단위 설정(유동값 설정)
+    $index : $i; //일반적인 정수로 선언을 해야할 경우
+    $per : calc(1% * $i); //w-100-per
+
+    .w-col-#{$i} {
+        width: $colunm;
+    }
+    .w-#{$i} {
+        width: $val;
+    }
+    .w-#{$i}-per {
+        width: $per;
+    }
+    .h-#{$i} {
+        height: $val;
+    }
+    .h-#{$i}-per {
+        height: $per;
+    }
+    // padding 영역 선언
+    .p-#{$i} {
+        padding : $val;
+    }
+    .pt-#{$i}{
+        padding-top: $val;
+    }
+    .pr-#{$i}{
+        padding-right: $val;
+    }
+    .pb-#{$i}{
+        padding-bottom: $val;
+    }
+    .pl-#{$i}{
+        padding-left: $val;
+    }
+    .fc-#{$i} {
+        font-size: $val;
+    }
+    // margin 영역 선언
+    .m-#{$i} {
+        margin : $val;
+    }
+    .mt-#{$i}{
+        margin-top: $val;
+    }
+    .mr-#{$i}{
+        margin-right: $val;
+    }
+    .mb-#{$i}{
+        margin-bottom: $val;
+    }
+    .ml-#{$i}{
+        margin-left: $val;
+    }
+
+    .gap-#{$i} {
+        gap: $val;
+    }
+    .col-gap-#{$i} {
+        column-gap: $val;
+    }
+    .row-gap-#{i} {
+        row-gap: $val;
+    }
+
+    .z-index-#{$i} {
+        z-index : $index;
+    }
+}
+.mx-auto {
+    margin-left:auto;
+    margin-right:auto;
+}

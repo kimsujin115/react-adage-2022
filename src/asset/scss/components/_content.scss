@@ -1,0 +1,63 @@
+.puma {
+    .tab-space {
+        .tab-btn {
+            border-bottom:1px solid $mainColor;
+            li {
+                button {
+                    background-color: $fontColor-f;
+                    color:  $fontColor-9;
+                    border:none;
+                    &.on {
+                        background-color: $mainColor;
+                        color:$fontColor-f;
+                    }
+                }
+            }
+
+        }
+        .tab-cont {
+            .tab-item-img {
+                img {
+                    object-fit: cover;
+                }
+            }
+            .tab-item-tit {
+                color : $fontColor-4;
+            }
+            .tab-item-txt {
+                color : $fontColor-9;
+            }
+        }
+        .dark {
+            position: fixed;
+            width:100%;
+            height:100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            &.on {
+                display: block;;
+            }
+        }
+        .popup {
+            position: fixed;
+            width:400px;
+            height:400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background-color: #fff;
+            display: none;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.on {
+                display: block;;
+            }
+        }
+    }
+}
