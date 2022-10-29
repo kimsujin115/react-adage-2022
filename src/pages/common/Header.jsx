@@ -22,7 +22,7 @@ const Header = () => {
                         <ul className="flex-style-2 col-gap-20">
                             {menuArr.map( (v,i) => (
                                 <li key={i}>
-                                    <Link className="d-block" to={"/category/"+  i}>
+                                    <Link className="d-block text-uppercase" to={"/category/"+  i}>
                                         {v[0]}
                                     </Link>
                                 </li>

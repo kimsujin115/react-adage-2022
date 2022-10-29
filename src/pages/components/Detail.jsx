@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import nike_01 from "../../asset/images/nike_01.jpg";
 import nike_02 from "../../asset/images/nike_02.jpg";
@@ -45,16 +45,21 @@ const Detail = () => {
 
     useEffect(() => {
         const pd_code = itemId.index;
-        console.log(pd_code); //"0-1"
+        console.log("pd_code : ", pd_code); //"0-1"
         const pd_code_arr = pd_code.split("-");
-        console.log(pd_code_arr); //['0', '1']
+        console.log("pd_code_arr : ", pd_code_arr); //['0', '1']
 
         setBrandIndex(pd_code_arr[0]);
         setDetailIndex(pd_code_arr[1]);
     }, []);
-    console.log(brandIndex);
-    console.log(detailIndex);
+    console.log("brandIndex : ", brandIndex);
+    console.log("detailIndex : ", detailIndex);
 
+    const navigate = useNavigate(); //history mode와 유사
+   
+    const historyBack = () => {
+        navigate(-1);
+    };
 
     return (
         <>
@@ -65,6 +70,10 @@ const Detail = () => {
                     </div>
                     <h3>{detailContext[brandIndex][detailIndex][1]}</h3>
                     <p>{detailContext[brandIndex][detailIndex][2]}</p>
+
+                    <div className="history">
+                        <button type="button" onClick={historyBack}>목록보기</button>
+                    </div>
                 </div>
             </div>
         </>

@@ -21,7 +21,7 @@ import puma_04 from "../../asset/images/puma_04.jpg";
 
 const Category = () => {
     const {index} = useParams();
-    console.log(index);
+    console.log("라우터에 의한 전달되는 값 : ", index);
     //url 라우터에 의한 전달되는 값을 추출할 수 있음
     
     const brandBanner = [nikeBanner, adidasBanner, pumaBanner];
