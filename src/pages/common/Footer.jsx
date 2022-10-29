@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <p>Copyrights &copy; AdAge Ltd.</p>
+                <p className="text-center">Copyrights &copy; AdAge Ltd.</p>
             </footer>
         </>
     )
