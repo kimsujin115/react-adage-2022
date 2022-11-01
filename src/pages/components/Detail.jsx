@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import {Link, useParams, useNavigate } from "react-router-dom";
 
 import nike_01 from "../../asset/images/nike_01.jpg";
 import nike_02 from "../../asset/images/nike_02.jpg";
@@ -57,9 +57,9 @@ const Detail = () => {
 
     const navigate = useNavigate(); //history mode와 유사
    
-    const historyBack = () => {
-        navigate(-1);
-    };
+    // const historyBack = () => {
+    //     navigate(-1);
+    // };
 
     return (
         <>
@@ -71,8 +71,11 @@ const Detail = () => {
                     <h3>{detailContext[brandIndex][detailIndex][1]}</h3>
                     <p>{detailContext[brandIndex][detailIndex][2]}</p>
 
-                    <div className="history">
-                        <button type="button" onClick={historyBack}>목록보기</button>
+                    <div className="history flex-style-2 gap-20">
+                        <Link to={"/category/"+detailIndex}>목록보기</Link>
+                        <Link to="/">메인으로 이동</Link>
+                        {/* <button type="button" onClick={historyBack}>목록보기</button>
+                        <button type="button" onClick={historyBack}>메인으로 이동</button> */}
                     </div>
                 </div>
             </div>
